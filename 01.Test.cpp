@@ -13,7 +13,7 @@ public:
 		name = n;
 	};
 
-	virtual void run() { // "Was soll der Thread ausführen?"
+	virtual void run() { // Was soll der Thread ausführen? >> run() muss immer neu definiert werden.
 		for (int i = 0; i < 10; i++)
 		{
 			cout << name << endl; 

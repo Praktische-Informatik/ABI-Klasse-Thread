@@ -1,7 +1,6 @@
 #include "Thread.h"
 
-static DWORD WINAPI ThreadFunktion(LPVOID param) {
-    // KlassenFunktion
+static DWORD WINAPI ThreadFunktion(LPVOID param) { // Wird mit der Methode start() aktiviert und startet die run(). >> statische Methode 
 	Thread* p_tmp= (Thread*) param;
     p_tmp->run();
 	return 0;
