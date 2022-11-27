@@ -2,23 +2,23 @@
 
 static DWORD WINAPI ThreadFunktion(LPVOID param) {
     // KlassenFunktion
-	CThread* p_tmp= (CThread*) param;
+	Thread* p_tmp= (Thread*) param;
     p_tmp->run();
 	return 0;
 }
   
 
-CThread::CThread(void)
+Thread::Thread(void)
 {
 }
 
 
-CThread::~CThread(void)
+Thread::~Thread(void)
 {
 }
 
 
-bool CThread::start(void)
+bool Thread::start(void)
 {
 
 	DWORD threadId = 0; 

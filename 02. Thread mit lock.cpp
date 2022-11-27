@@ -3,7 +3,7 @@
 #include <iostream>
 using namespace std;
 
-class MyThread : public CThread
+class MyThread : public Thread
 {
 private:
 	string name;
@@ -35,7 +35,7 @@ public:
 
 	virtual bool start() // erzeugt einen Thread und startet die run-Methode
 	{
-		CThread::start();
+		Thread::start();
 		return true;
 	}
 };
