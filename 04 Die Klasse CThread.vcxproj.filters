@@ -23,13 +23,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01. Thread.cpp">
+    <ClCompile Include="01.Test.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="Thread.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="02. Thread mit lock.cpp">
+    <ClCompile Include="02.Test mit lock.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
