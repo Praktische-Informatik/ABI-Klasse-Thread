@@ -28,21 +28,21 @@ public:
 	}
 };
 
-int main()
-{
-	cout << "Test1" << endl;
-
-	MyThread tmp1("Peter");
-	tmp1.start();
-
-	MyThread tmp2("Mueller");
-	tmp2.start();
-
-	cout << "Test2" << endl;
-	Sleep(500);
-	cout << "Test3" << endl;
-	Sleep(500);
-
-	return 0;
-}
+//int main()
+//{
+//	cout << "Test1" << endl;
+//
+//	MyThread tmp1("Peter");
+//	tmp1.start();
+//
+//	MyThread tmp2("Mueller");
+//	tmp2.start();
+//
+//	cout << "Test2" << endl;
+//	Sleep(500);
+//	cout << "Test3" << endl;
+//	Sleep(500);
+//
+//	return 0;
+// }
 
