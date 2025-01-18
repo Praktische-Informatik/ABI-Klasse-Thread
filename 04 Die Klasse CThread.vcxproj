@@ -83,9 +83,12 @@
     <ClInclude Include="Thread.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="02.Test mit lock.cpp" />
-    <ClCompile Include="01.Test.cpp" />
-    <ClCompile Include="Thread.cpp" />
+    <ClCompile Include="02.Besipiel.cpp" />
+    <ClCompile Include="03.Beispiel mit lock.cpp" />
+    <ClCompile Include="01.Beispiel.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

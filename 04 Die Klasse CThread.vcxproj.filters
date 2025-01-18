@@ -23,14 +23,17 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01.Test.cpp">
+    <ClCompile Include="01.Beispiel.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Thread.cpp">
+    <ClCompile Include="03.Beispiel mit lock.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="02.Test mit lock.cpp">
+    <ClCompile Include="02.Besipiel.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
