@@ -1,40 +1,60 @@
 #pragma once
 #include <thread>
-#include <functional>
 #include <atomic>
 
-class Thread { // Abstrakte Klasse
+class Thread {
 private:
     std::thread p_thread;
     std::atomic<bool> running;
+    std::atomic<bool> stopRequested;
 
 public:
-    Thread() : running(false) {}
+    Thread() : running(false), stopRequested(false) {}
+
     virtual ~Thread() {
-        if (running) {
-            join(); // Sicherstellen, dass der Thread beendet wird
+        requestStop();
+        if (p_thread.joinable()) {
+            p_thread.join();
         }
     }
 
-    virtual void run() = 0; // Virtuelle Funktion
+    // Muss von der Unterklasse implementiert werden
+    virtual void run() = 0;
 
-    virtual bool start() { // Diese Methode sollte virtual sein
-        if (running) return false; // Verhindern, dass der Thread mehrfach gestartet wird
+    // Startet den Thread
+    virtual bool start() {
+        if (running) return false;
 
         running = true;
-        p_thread = std::thread(&Thread::threadFunction, this);
+        stopRequested = false;
+
+        // threadFunction NICHT static, einfacher und modern
+        p_thread = std::thread(&Thread::threadLoop, this);
         return true;
     }
 
+    // Signalisiert dem Thread, dass er aufhoeren soll
+    void requestStop() {
+        stopRequested = true;
+    }
+
+    // Unterklassen koennen diese Methode abfragen:
+    bool stopRequestedFlag() const {
+        return stopRequested;
+    }
+
+    // Warten auf das Thread-Ende
     void join() {
         if (p_thread.joinable()) {
             p_thread.join();
-            running = false;
         }
+        running = false;
     }
 
 private:
-    static void threadFunction(Thread* threadInstance) {
-        threadInstance->run();
+    // Thread-Hauptschleife
+    void threadLoop() {
+        run();          // Ausführung der Unterklasse
+        running = false;
     }
 };

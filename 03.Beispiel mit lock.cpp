@@ -33,20 +33,20 @@ public:
     }
 };
 
-int main() {
-    cout << "Test1" << endl;
-
-    atomic<bool> l(false); // Zugriff erlaubt
-    MyThread tmp1("Peter", &l);
-    tmp1.start();
-
-    MyThread tmp2("Mueller", &l);
-    tmp2.start();
-
-    cout << "Test2" << endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // Pause für 1000 Millisekunden
-    cout << "Test3" << endl;
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // Pause für 1000 Millisekunden
-
-    return 0;
-}
+//int main() {
+//    cout << "Test1" << endl;
+//
+//    atomic<bool> l(false); // Zugriff erlaubt
+//    MyThread tmp1("Peter", &l);
+//    tmp1.start();
+//
+//    MyThread tmp2("Mueller", &l);
+//    tmp2.start();
+//
+//    cout << "Test2" << endl;
+//    std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // Pause für 1000 Millisekunden
+//    cout << "Test3" << endl;
+//    std::this_thread::sleep_for(std::chrono::milliseconds(1000)); // Pause für 1000 Millisekunden
+//
+//    return 0;
+//}
