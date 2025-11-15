@@ -23,13 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="01.Beispiel.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="03.Beispiel mit lock.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="02.Besipiel.cpp">
+    <ClCompile Include="Beispiel.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
