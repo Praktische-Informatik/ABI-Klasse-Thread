@@ -80,10 +80,12 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TelefonbuchServer.h" />
     <ClInclude Include="Thread.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Beispiel.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TelefonbuchServer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
